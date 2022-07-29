@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "132678681327",
-    "project_id": "money-man-b2a23",
-    "storage_bucket": "money-man-b2a23.appspot.com"
+    "project_number": "206849355029",
+    "project_id": "money-manager-af6d6",
+    "storage_bucket": "money-manager-af6d6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:132678681327:android:7c5afb1d37f1b3789d911a",
+        "mobilesdk_app_id": "1:206849355029:android:1cbd88f922968976044d1c",
         "android_client_info": {
-          "package_name": "com.example.money_man"
+          "package_name": "vn.qc.money_manager"
         }
       },
       "oauth_client": [
         {
-          "client_id": "132678681327-d4anbviio1rpquhv3sqd1i6gvll68e3k.apps.googleusercontent.com",
+          "client_id": "206849355029-1bb0ajh7ebmuqe2a2dben9rg4mmjm5kk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.money_man",
-            "certificate_hash": "7f7ed50097b7846d89bbdfed26eeae6e773a1c65"
+            "package_name": "vn.qc.money_manager",
+            "certificate_hash": "aefe1ca0286e97f41c954bf9208cb4aa5189e8e9"
           }
         },
         {
-          "client_id": "132678681327-mn1l7p1vm14r9u2abs8cf8s873pi8vbs.apps.googleusercontent.com",
+          "client_id": "206849355029-8etjjir67qjhjc26ojne37erg9j0bu8l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAC83m91w-CjfgUrtY245MAFAM35erZ2Wk"
+          "current_key": "AIzaSyCJ4ttIG44fMlY_XvBa0RBU0o2hBUfsJ5k"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "132678681327-dp3t2hs9pb7je5q97s7qsemm2f83nin9.apps.googleusercontent.com",
+              "client_id": "206849355029-8etjjir67qjhjc26ojne37erg9j0bu8l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
