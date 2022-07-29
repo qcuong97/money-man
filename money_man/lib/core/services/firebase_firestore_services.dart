@@ -90,10 +90,14 @@ class FirebaseFireStoreService {
   }
 
   // stream của wallet hiện tại đang được chọn
-  Stream<Wallet> get currentWallet {
-    return users.doc(uid).snapshots().map((event) {
+  Future<Wallet> get currentWallet async {
+    var res = users.doc(uid).snapshots().map((event) {
       return Wallet.fromMap(event.get('currentWallet'));
     });
+    if (res != null && (await res.isEmpty) == false) {
+      return res.first;
+    }
+    return null;
   }
 
   // add wallet

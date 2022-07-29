@@ -7,6 +7,8 @@ import 'package:money_man/ui/style.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
+import '../../../locator.dart';
+
 // màn hình này xuất hiện khi người dùng mới đăng ký bằng email và cần nhập thông tin tên người dùng
 class AccountInformationScreen extends StatelessWidget {
   @override
@@ -115,7 +117,7 @@ class _AccountInformation extends State<AccountInformation> {
   @override
   Widget build(BuildContext context) {
     // Biến để tham chiếu đến các hàm thực hiện thay đổi trên firebase
-    final _auth = Provider.of<FirebaseAuthService>(context);
+    final _auth = locator<FirebaseAuthService>();
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,

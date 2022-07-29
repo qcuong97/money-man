@@ -192,7 +192,7 @@ class _EventScreenState extends State<EventScreen>
 
 // hàm gọi khi thay đổi ví, nó hiện cái màn hình chọn ví lên á
   void buildShowDialog(BuildContext context, id) async {
-    final _auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final _auth = locator<FirebaseAuthService>();
     final _firebase =
         Provider.of<FirebaseFireStoreService>(context, listen: false);
     final result = await showCupertinoModalBottomSheet(

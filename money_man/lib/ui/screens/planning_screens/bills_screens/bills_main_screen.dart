@@ -564,7 +564,7 @@ class _BillsMainScreenState extends State<BillsMainScreen> {
 
   // Hàm hiển thị chọn wallet.
   void buildShowDialog(BuildContext context, id) async {
-    final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final auth = locator<FirebaseAuthService>();
     final firestore =
         Provider.of<FirebaseFireStoreService>(context, listen: false);
 

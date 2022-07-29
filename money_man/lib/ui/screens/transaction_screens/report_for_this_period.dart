@@ -584,7 +584,7 @@ class _ReportForThisPeriodScreen extends State<ReportForThisPeriodScreen>
   }
 
   void buildShowDialog(BuildContext context, id) async {
-    final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final auth = locator<FirebaseAuthService>();
 
     await showCupertinoModalBottomSheet(
         isDismissible: true,

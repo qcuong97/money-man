@@ -179,7 +179,7 @@ class _BudgetScreenState extends State<BudgetScreen>
 
 // Này là dialoge để chọn ví
   void buildShowDialog(BuildContext context, String id) async {
-    final _auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final _auth = locator<FirebaseAuthService>();
     final _firestore =
         Provider.of<FirebaseFireStoreService>(context, listen: false);
 

@@ -1823,7 +1823,7 @@ class _TransactionScreen extends State<TransactionScreen>
   }
 
   void buildShowDialogSelectWallet(BuildContext context, id) async {
-    final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final auth = locator<FirebaseAuthService>();
 
     await showCupertinoModalBottomSheet(
         isDismissible: true,

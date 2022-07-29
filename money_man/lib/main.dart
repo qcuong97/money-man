@@ -4,12 +4,14 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:money_man/others/navigation_service.dart';
 import 'package:money_man/ui/screens/shared_screens/error_screen.dart';
 import 'package:money_man/ui/screens/shared_screens/loading_screen.dart';
 import 'package:money_man/ui/widgets/wrapper.dart';
 import 'package:money_man/ui/widgets/wrapper_builder.dart';
 import 'package:provider/provider.dart';
 import 'core/services/firebase_authentication_services.dart';
+import 'locator.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -121,24 +123,18 @@ class _AppState extends State<App> {
 
     return KeyedSubtree(
       key: key,
-      child: MultiProvider(
-        providers: [
-          Provider(create: (_) {
-            return FirebaseAuthService();
-          }),
-        ],
-        child: WrapperBuilder(
-          builder: (context, userSnapshot) {
-            return MaterialApp(
-              debugShowCheckedModeBanner: false,
-              home: SafeArea(
-                child: Wrapper(
-                  userSnapshot: userSnapshot,
-                ),
+      child: WrapperBuilder(
+        builder: (context, userSnapshot) {
+          return MaterialApp(
+            navigatorKey: locator<NavigationService>().navigatorKey,
+            debugShowCheckedModeBanner: false,
+            home: SafeArea(
+              child: Wrapper(
+                userSnapshot: userSnapshot,
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

@@ -15,6 +15,8 @@ import 'package:money_man/ui/widgets/money_symbol_formatter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../locator.dart';
+
 class RecurringTransactionMainScreen extends StatefulWidget {
   Wallet wallet;
   RecurringTransactionMainScreen({
@@ -353,7 +355,7 @@ class _RecurringTransactionMainScreenState
 
   // Hàm hiển thị chọn wallet.
   void buildShowDialog(BuildContext context, String id) async {
-    final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final auth = locator<FirebaseAuthService>();
     final firestore =
         Provider.of<FirebaseFireStoreService>(context, listen: false);
 

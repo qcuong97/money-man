@@ -9,7 +9,7 @@ class WrapperBuilder extends StatelessWidget {
   WrapperBuilder({this.builder});
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<FirebaseAuthService>(context, listen: false);
+    final auth = locator<FirebaseAuthService>();
 
     // streambuilder để theo dõi trạng thái của user
     return StreamBuilder<User>(

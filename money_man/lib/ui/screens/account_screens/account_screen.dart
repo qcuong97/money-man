@@ -13,6 +13,7 @@ import 'package:money_man/ui/style.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../../locator.dart';
 import 'account_detail_screen.dart';
 import 'help_screens/help_screens.dart';
 
@@ -84,7 +85,7 @@ class _TestState extends State<Test> {
   @override
   Widget build(BuildContext context) {
     // Biến tham chiếu đến các chức năng của firebase
-    final _auth = Provider.of<FirebaseAuthService>(context);
+    final _auth = locator<FirebaseAuthService>();
     return Scaffold(
         backgroundColor: Style.backgroundColor,
         appBar: AppBar(
